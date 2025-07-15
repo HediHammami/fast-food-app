@@ -6,6 +6,7 @@ import {
   Databases,
   ID,
   Query,
+  Storage,
 } from "react-native-appwrite";
 
 export const appwriteConfig = {
@@ -13,7 +14,12 @@ export const appwriteConfig = {
   platform: "com.hedi.fastfood",
   projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID!,
   databaseId: "686cf8e7002e66248b4b",
+  bucketId: "6876590a003d57fcf149",
   userCollectionId: "686cf90800398e7e14af",
+  categoriesCollectionId: "687655810025c10e585d",
+  menuCollectionId: "687656110035800b9c7b",
+  customizationsCollectionId: "6876572300357bfe2cfa",
+  menuCustomizationsCollectionId: "687657f1002aac00a664",
 };
 
 export const client = new Client();
@@ -25,6 +31,7 @@ client
 
 export const account = new Account(client);
 export const databases = new Databases(client);
+export const storage = new Storage(client);
 
 const avatars = new Avatars(client);
 
